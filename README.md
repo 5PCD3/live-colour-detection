@@ -22,7 +22,7 @@ Live Colour Detection is a computer vision project that enables real-time color 
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-username/live-colour-detection.git
+    git clone https://github.com/5PCD3/live-colour-detection.git
     cd live-colour-detection
     ```
 
