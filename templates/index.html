@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Colour Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Live Colour Detector</h1>
+
+        <div>
+            <img id="video_feed" width="640" height="480" style="border: 2px solid black;">
+        </div>
+
+        <div class="color-buttons">
+            <a href="/video?color=yellow" class="color-button yellow">Yellow</a>
+            <a href="/video?color=red" class="color-button red">Red</a>
+            <a href="/video?color=blue" class="color-button blue">Blue</a>
+            <a href="/video?color=purple" class="color-button purple">Purple</a>
+            <a href="/video?color=orange" class="color-button orange">Orange</a>
+            <a href="/video?color=gray" class="color-button gray">Gray</a>
+            <a href="/video?color=green" class="color-button green">Green</a>
+        </div>
+        <p style="margin-top: 20px; font-size: 18px; color: #1e88e5;">Click the upper buttons to select the colour and detect.</p>
+    
+    </div>
+
+    <script>
+        // JavaScript to update the video feed
+        const videoFeed = document.getElementById('video_feed');
+
+        function updateVideo(color) {
+            videoFeed.src = `/video?color=${color}`;  // Route to the video stream with color parameter
+            setTimeout(() => updateVideo(color), 100);  // Update every 100 milliseconds
+        }
+
+        // Initial update with the default color (red)
+        updateVideo('red');
+    </script>
+
+</body>
+
+</html>

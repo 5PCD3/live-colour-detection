@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    
+    background-image: url('./christopher-balaskas-visit-flat-as.jpg');
+
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.4); /* Dark and transparent background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #0bc2ef;
+}
+
+#video_feed {
+    display: block;
+    margin: 20px auto;
+    border: 2px solid rgb(125, 1, 121);
+}
+
+.color-buttons {
+    margin-top: 20px;
+}
+
+.color-button {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.yellow {
+    background-color: #fdd835;
+    color: #000;
+}
+
+.red {
+    background-color: #e53935;
+    color: #fff;
+}
+
+.blue {
+    background-color: #1e88e5;
+    color: #fff;
+}
+
+.purple {
+    background-color: #7e57c2;
+    color: #fff;
+}
+
+.orange {
+    background-color: #ff9800;
+    color: #fff;
+}
+
+.gray {
+    background-color: #757575;
+    color: #fff;
+}
+
+.green {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.color-button:not(:last-child) {
+    margin-right: 10px;
+}
+
+.color-button:hover {
+    filter: brightness(80%);
+}
